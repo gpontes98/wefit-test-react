@@ -36,7 +36,7 @@ export function Home() {
                                         style={{ border: 'none' }}
                                         onClick={() => setItens(itens.filter((_: number, aux: number) => aux !== key))}
                                     >
-                                        <img src={icDelete} alt="Deletar tarefa" />
+                                        <Styled.ImageTrash src={icDelete} alt="Deletar tarefa" />
                                     </button>
                                 </ItemTodo>
                             )

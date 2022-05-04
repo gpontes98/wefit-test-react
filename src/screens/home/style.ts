@@ -24,3 +24,12 @@ export const TextTodo = styled.p`
     font-size: 14px;
     color: #606060;
 `
+
+export const ImageTrash = styled.img`
+    height: 16px;
+    transition: .3s;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+`
