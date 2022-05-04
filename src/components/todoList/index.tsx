@@ -1,5 +1,3 @@
-import React from 'react'
-
 import * as Styled from './style'
 
 export function TodoList(props: { children: any }) {

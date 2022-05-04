@@ -8,4 +8,5 @@ export const ItemContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 4px 0;
 `

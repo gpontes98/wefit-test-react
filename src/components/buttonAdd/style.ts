@@ -7,4 +7,9 @@ export const ButtonAdd = styled.button`
     background-color: #40D9B8;
     border: none;
     border-radius: 100px;
+    transition: 0.5s;
+    &:hover {
+        background-color: #39bfa2;
+        cursor: pointer;
+    }
 `

@@ -17,25 +17,32 @@ export function Home() {
 
     return (
         <Styled.Container>
-            <form style={{ width: '100%', display: 'flex', justifyContent: 'space-between', marginBottom: 24 }}>
+            <Styled.FormTodo>
                 <InputText placeholder="Digite" inputText={inputText} setInputText={setInputText} />
                 <ButtonAdd inputText={inputText} setInputText={setInputText} itens={itens} setItens={setItens} />
-            </form>
+            </Styled.FormTodo>
+
             {itens?.length < 1 ?
                 <TodoList>
                     Nenhum item cadastrado
                 </TodoList>
-                :
-                <>
-                    {itens?.map((item: string, key: number) => {
-                        return (
-                            <ItemTodo key={key}>
-                                <p style={{ margin: 0, padding: 0, wordBreak: 'break-all', fontSize: 14, color: "#606060" }}>{item}</p>
-                                <button style={{ border: 'none' }} onClick={() => setItens(itens.filter((_: number, aux: number) => aux !== key))}><img src={icDelete} alt="Deletar tarefa" /></button>
-                            </ItemTodo>
-                        )
-                    })}
-                </>
+                : (
+                    <>
+                        {itens?.map((item: string, key: number) => {
+                            return (
+                                <ItemTodo key={key}>
+                                    <Styled.TextTodo>{item}</Styled.TextTodo>
+                                    <button
+                                        style={{ border: 'none' }}
+                                        onClick={() => setItens(itens.filter((_: number, aux: number) => aux !== key))}
+                                    >
+                                        <img src={icDelete} alt="Deletar tarefa" />
+                                    </button>
+                                </ItemTodo>
+                            )
+                        })}
+                    </>
+                )
             }
         </Styled.Container>
     )
